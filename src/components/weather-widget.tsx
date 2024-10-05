@@ -127,20 +127,20 @@ export default function WeatherWidget() {
 
   // JSX return statement rendering the weather widget UI
   return (
-    <div className="flex justify-center items-center h-screen bg-gradient-to-r from-gray-400  to-yellow-200 ">
+    <div className="flex justify-center items-center h-screen bg-gradient-to-r from-red-300  to-blue-300">
       {/* Center the card within the screen */}
-      <Card className="w-full max-w-md mx-auto text-center bg-gradient-to-r from-green-200  to-pink-200 ">
+      <Card className="w-full max-w-md mx-auto text-center bg-gradient-to-r from-gray-400  to-yellow-200 text-black-800">
         {/* Card header with title and description */}
         <CardHeader>
-          <CardTitle>Weather App</CardTitle>
-          <CardDescription>
+          <CardTitle>Weather Widget</CardTitle>
+          <CardDescription className="text-black-900 ">
             Search for the current weather conditions in your city.
           </CardDescription>
         </CardHeader>
         {/* Card content including the search form and weather display */}
         <CardContent>
           {/* Form to input and submit the location */}
-          <form onSubmit={handleSearch} className="flex items-center gap-2  ">
+          <form onSubmit={handleSearch} className="flex items-center gap-2 ">
             <Input
               type="text"
               placeholder="Enter a city name"
@@ -150,7 +150,7 @@ export default function WeatherWidget() {
                   setLocation(e.target.value) // Update location state on input change
               }
             />
-            <Button className="bg-gradient-to-r from-blue-400  to-red-400 " type="submit" disabled={isLoading}>
+            <Button className="bg-gradient-to-r from-red-300  to-blue-300" type="submit" disabled={isLoading}>
               {isLoading ? "Loading..." : "Search"}{" "}
               {/* Show "Loading..." text while fetching data */}
             </Button>
