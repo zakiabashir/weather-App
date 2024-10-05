@@ -132,7 +132,7 @@ export default function WeatherWidget() {
       <Card className="w-full max-w-md mx-auto text-center bg-gradient-to-r from-gray-400  to-yellow-200 text-black-800">
         {/* Card header with title and description */}
         <CardHeader>
-          <CardTitle>Weather <App></App></CardTitle>
+          <CardTitle>Weather App</CardTitle>
           <CardDescription className="text-black-900 ">
             Search for the current weather conditions in your city.
           </CardDescription>
